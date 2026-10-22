@@ -1,2 +1,3 @@
 # Portfolio
-Professional Portfolio - ANNALISA DELLAVALLE
+
+Annalisa Dellavalle, portfolio online (IT/EN).

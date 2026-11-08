@@ -105,6 +105,19 @@ footer a{color:var(--line);margin-right:20px}
 .det figure img{max-height:340px;object-fit:contain}
 .det h3{font-size:14.5px}
 .cvreq{color:var(--mute);font-size:14px}
+.bg{max-width:1040px;margin:0 auto;padding:0 22px 64px}
+.bg>h2{font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--mute);font-weight:700;margin:0 0 14px;padding-top:24px;border-top:1px solid var(--edge)}
+.bgg{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+@media(min-width:840px){.bgc:nth-child(1) .bgi{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px}}
+.bgi{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.bgi p{margin:0}
+.bgc{background:var(--panel);border:1px solid var(--edge);border-radius:14px;padding:18px 20px}
+.bgc h3{font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--line);margin:0 0 10px;font-weight:700}
+.bgc p{margin:0 0 12px;font-size:15px;line-height:1.5}
+.bgc p:last-child{margin-bottom:0}
+.bgc small{display:block;white-space:pre-line;color:var(--mute);font-size:13.5px;line-height:1.45;margin-top:2px}
+.bgc a{color:var(--line);text-decoration:none;border-bottom:1px solid transparent}
+.bgc a:hover,.bgc a:focus-visible{border-bottom-color:var(--line)}
 </style>
 </head>
 <body>
@@ -112,7 +125,7 @@ footer a{color:var(--line);margin-right:20px}
 <div class="lang" role="group" aria-label="Lingua / Language"><button type="button" data-lang="it" aria-pressed="true"><svg viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg>IT</button><button type="button" data-lang="en" aria-pressed="false"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></svg>EN</button></div>
 <h1>Annalisa <b>Dellavalle</b></h1>
 <p class="rtitle" id="rtitle">Ingegnere biomedico | Strumentazione medica, software e hardware | Torino</p>
-<nav class="links" aria-label="Contatti"><a href="mailto:annalisadellavalle94@gmail.com">Email</a><a href="https://linkedin.com/in/annalisadellavalle">LinkedIn</a><a href="https://www.minervamedica.it/en/journals/minerva-cardiology-angiology/article.php?cod=R05Y2022N01A0102">Minerva 2022</a><span class="cvreq" id="cvreq"></span></nav>
+<nav class="links" aria-label="Contatti"><a href="mailto:annalisadellavalle94@gmail.com">Email</a><a href="https://linkedin.com/in/annalisadellavalle">LinkedIn</a><a href="#background" id="bglink">Background</a><span class="cvreq" id="cvreq"></span></nav>
 <p class="role" id="role">Ingegnere biomedico con competenze in machine e deep learning per EEG e immagini mediche, elaborazione di segnali biomedici (EMG, ECG) e di immagini, sensoristica e sistemi embedded. Esperienza in classificazione dei disturbi del sonno da polisonnografia, segmentazione dei vasi retinici, visione 3D e biometria, calibrazione e validazione di sensori, telemonitoraggio e analisi del cammino. Conoscenza del Regolamento UE 2017/745 (MDR) e della norma EN ISO 80601-2-56, con test di pre-conformità.</p>
 <div class="skills" id="skills"></div>
 <canvas class="eeg" id="eeg" aria-hidden="true"></canvas>
@@ -139,6 +152,7 @@ footer a{color:var(--line);margin-right:20px}
 </div>
 </div>
 
+<section class="bg" id="background" aria-labelledby="bgt"><h2 id="bgt"></h2><div class="bgg" id="bgg"></div></section>
 <div class="tip" id="tip" role="tooltip" aria-hidden="true"></div>
 <script>
 var P=[
@@ -288,6 +302,27 @@ function sel(id,scroll){
  card.innerHTML=h;
  if(scroll){var r=card.getBoundingClientRect();if(window.matchMedia("(max-width:839px)").matches||r.top<0||r.top>window.innerHeight*0.6)card.scrollIntoView({behavior:"smooth",block:"start"})}
 }
+var BG={
+it:{t:"Background",c:[
+{h:"Formazione",i:[
+["Laurea magistrale in Ingegneria Biomedica presso il Politecnico di Torino","2026, 103/110\nTesi: “Microstructure-informed deep learning for sleep disorder classification using SO-Spindle dynamics”"],
+["Laurea triennale in Ingegneria Biomedica presso il Politecnico di Torino","2022, 95/110\nTesi: “Cardiovascular risk prediction: from classical statistical methods to machine learning approaches”"]]},
+{h:"Pubblicazione",i:[
+["Coautrice, Minerva Cardiologia e Angiologia, 2022","Cardiovascular risk prediction: from classical statistical methods to machine learning approaches. Vol. 70, n. 1.","https://www.minervamedica.it/en/journals/minerva-cardiology-angiology/article.php?cod=R05Y2022N01A0102"]]}]},
+en:{t:"Background",c:[
+{h:"Education",i:[
+["M.Sc. in Biomedical Engineering at Politecnico di Torino","2026, 103/110\nThesis: “Microstructure-informed deep learning for sleep disorder classification using SO-Spindle dynamics”"],
+["B.Sc. in Biomedical Engineering at Politecnico di Torino","2022, 95/110\nThesis: “Cardiovascular risk prediction: from classical statistical methods to machine learning approaches”"]]},
+{h:"Publication",i:[
+["Co-author, Minerva Cardiology and Angiology, 2022","Cardiovascular risk prediction: from classical statistical methods to machine learning approaches. Vol. 70, no. 1.","https://www.minervamedica.it/en/journals/minerva-cardiology-angiology/article.php?cod=R05Y2022N01A0102"]]}]}
+};
+function buildBg(l){
+ var b=BG[l];document.getElementById("bgt").textContent=b.t;
+ document.getElementById("bgg").innerHTML=b.c.map(function(c){
+  return "<div class=\"bgc\"><h3>"+esc(c.h)+"</h3><div class=\"bgi\">"+c.i.map(function(x){
+   var n=x[2]?"<a href=\""+x[2]+"\">"+esc(x[0])+"</a>":esc(x[0]);
+   return "<p><b>"+n+"</b><small>"+esc(x[1])+"</small></p>"}).join("")+"</div></div>"}).join("");
+}
 function setLang(l){
  lang=l;hideTip();try{localStorage.setItem("lang",l)}catch(e){}
  document.documentElement.lang=l;
@@ -298,6 +333,7 @@ function setLang(l){
  document.getElementById("body-svg").setAttribute("aria-label",UI[l].aria);
  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false")});
  pts.querySelectorAll(".pt").forEach(function(g){var p=loc(P.filter(function(x){return x.id===g.getAttribute("data-id")})[0]);g.setAttribute("aria-label",p.t)});
+ buildBg(l);document.getElementById("bglink").textContent=BG[l].t;
  buildList();if(cur)sel(cur,false);
 }
 document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"))})});

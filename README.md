@@ -1,3 +1,3 @@
 # Portfolio
 
-Annalisa Dellavalle, portfolio online (IT/EN).
+Annalisa Dellavalle, online portfolio (IT/EN).
